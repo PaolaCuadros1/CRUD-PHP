@@ -42,6 +42,7 @@ $todasLasPersonas =  $persona->obtenerPersonas();
   <th> Descripción </th>
   <th> Modificar </th>
   <th> Eliminar </th>
+  <th> Agregar Experiencia </th>
 
   <?php 
   while( $pers = mysqli_fetch_object($todasLasPersonas) ){
@@ -52,6 +53,7 @@ $todasLasPersonas =  $persona->obtenerPersonas();
     echo " <td> $pers->descripcion </td> ";
     echo " <td><a href='modificar.php?id=$pers->id'>Modificar</a></td>";
     echo " <td><a href='eliminar.php?id=$pers->id'>Eliminar</a></td>";
+    echo " <td><a href='agregarExperiencia.php?id=$pers->id'>Agregar experiencia</a></td>";
     echo " </tr> ";
   }
   ?>
